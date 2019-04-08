@@ -129,7 +129,7 @@
                 <div class="kc">库存：{{store}}</div>    
                 <div class="clearfix"></div>           
             </div>
-            <mt-button size="large" style="background:#000;border-radius:0;color:#fff ">立即购买</mt-button>
+            <mt-button size="large" style="background:#000;border-radius:0;color:#fff " @click="nowshop">立即购买</mt-button>
         </div>
 
         <div class="ditu">
@@ -170,6 +170,11 @@ export default {
         }
     },
     methods: {
+        nowshop(){
+            this.count=document.getElementsByClassName("jia")[0].nextElementSibling.innerHTML
+            var a=document.getElementsByClassName("back")
+                this.$router.push("/cart?img_url="+this.arr[0]+"&title="+this.title+"&pid="+this.pid+"&size="+a[1].innerHTML+"&count="+this.count+"&price="+this.price+"&color="+a[0].innerHTML)
+        },
         gohome(){
             this.$router.push("/")
         },

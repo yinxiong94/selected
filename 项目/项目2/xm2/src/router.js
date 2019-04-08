@@ -6,6 +6,8 @@ import spfl from "./components/spfl"
 import spxq from "./components/spxq"
 import gwc  from "./components/gwc"
 import spxq1 from "./components/spxq1"
+import cart from "./components/cart"
+import cart1 from "./components/cart1"
 
 Vue.use(Router)
 
@@ -16,6 +18,8 @@ export default new Router({
     {path:"/spfl",component:spfl},
     {path:"/spxq",component:spxq},
     {path:"/gwc",component:gwc},
-    {path:"/spxq1",component:spxq1}
+    {path:"/spxq1",component:spxq1},
+    {path:"/cart",component:cart},
+    {path:"/cart1",component:cart1}
   ]
 })

@@ -106,7 +106,7 @@
                 </li>
                 <li style="width:35%" id="zj">合计：￥0</li>
                 <li style="width:40%">
-                    <mt-button style="background:#000;color:#fff;width:100%;height:46px;border-radius:0;font-size: 12px">购买结算</mt-button>
+                    <mt-button style="background:#000;color:#fff;width:100%;height:46px;border-radius:0;font-size: 12px" @click="gmjs">购买结算</mt-button>
                 </li>
                 <div class="clearfix"></div>
             </ul>            
@@ -135,10 +135,21 @@ export default {
             pid:"",
             color:[],
             store:"",
-            count:""
+            count:"",
+            id:[]
         }
     },
     methods: {
+        gmjs(){
+            var a=document.getElementsByClassName("1");
+            for(var i=0;i<a.length;i++){
+                if(a[i].checked==true){
+                    var c=a[i].parentNode.parentNode.dataset.uid
+                    this.id.push(c)
+                }
+            }
+            this.$router.push("/cart1?uid="+this.id)
+        },
         all(){
             var a=document.getElementById("all").checked;
             if(a==true){

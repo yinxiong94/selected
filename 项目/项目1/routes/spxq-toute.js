@@ -11,6 +11,16 @@ router.get("/",(req,res)=>{
     });    
 })
 
+router.get("/cart",(req,res)=>{
+    var uid=req.query.uid;
+    var sql="select*from sec_spcar where uid in ("+uid+")";
+    pool.query(sql,[uid],(err,result)=>{
+        if(err) throw err;
+        res.send(result)
+    })
+})
+
+
 router.get("/addcart1",(req,res)=>{
     if(!req.session.phone){ 
         res.send({code:-1,data:[],msg:"请登录"});
