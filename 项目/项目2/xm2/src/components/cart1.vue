@@ -46,21 +46,21 @@
                         <p>{{item.color}}</p>
                         <p>{{item.size}}</p>
                         <span style="float:left">×{{item.count}}</span>
-                        <span style="float:right">￥{{item.price}}</span>
+                        <span style="float:right">￥{{item.price1}}</span>
                     </div>
                 </li>
             </ul>
         </div> 
 
-        <div class="product" style="margin-top:20px;padding-top:10px;padding-bottom:20px">
-            配送方式
-            <div style="float:right;border-radius:30px;background:#fff;padding:5px">
-                <span style="width:85px; display: inline-block;text-align: center;">邮寄到家</span>
-                <span style="width:85px; display: inline-block;text-align: center;">到店自提</span>
+        <div class="product" style="margin-top:20px;padding-top:10px;padding-bottom:10px">
+            <span style="padding:5px;display:inline-block;">配送方式</span> 
+            <div style="float:right;background:#fff;border-radius:15px">
+            <span style="width:90px; display: inline-block;text-align: center;padding: 5px;border-radius: 15px;" class="fff" :data-index="1" @click="f" :class="active==1?'back':''">邮寄到家</span>
+            <span style="width:90px; display: inline-block;text-align: center;padding: 5px;border-radius: 15px;"  class="fff" :data-index="2" @click="f" :class="active==2?'back':''">到店自提</span>          
             </div>
         </div>
 
-        <div class="sizebox">请选择地址</div>
+        <div class="sizebox" @click="address">请选择地址</div>
         <div class="sizebox">输入券码</div>
         <div class="sizebox">优惠券</div>
 
@@ -75,7 +75,11 @@
             </p>
             <p>
                 <span>折扣</span>
-                <span>-￥90</span>
+                <span id="zk">-￥90</span>
+            </p>
+            <p>
+                <span style="color:#000">合计：</span>
+                <span style="color:#000" id="zj1">￥0</span>
             </p>
         </div>
 
@@ -92,21 +96,33 @@ export default {
             uid:this.$route.query.uid,
             list:[],
             price:[],
-            count:[]
+            count:[],
+            active:1
         }
     },
     methods: {
+        address(){
+            console.log(0)
+        },
+        f(e){
+            this.active=e.target.dataset.index
+        },
         loadmore(){
             var url="http://127.0.0.1:3000/spxq/cart?uid="+this.uid;
             this.axios.get(url).then(result=>{
-                this.list=result.data;
-                console.log(this.list)  
-                var sum=0;           
+                this.list=result.data; 
+                var sum=0;  
+                var sum1=0;         
                 for(var i=0;i<this.list.length;i++){                    
-                    var a=(this.list[i].price)*(this.list[i].count)
-                    sum+=a
+                    var a=(this.list[i].price1)*(this.list[i].count)
+                    var b=(this.list[i].price)*(this.list[i].count)
+                    sum+=a;
+                    sum1+=b;
+
                 }
             document.getElementById("zj").innerHTML="￥"+sum
+            document.getElementById("zk").innerHTML="-￥"+(sum-sum1)
+            document.getElementById("zj1").innerHTML="￥"+sum1
             })
         },
         login_gwc(){
@@ -163,6 +179,7 @@ export default {
  .sp_list ul li{padding: 3%}
  .sp_list p{text-align: left;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;font-size: 12px; color:#000}
  .sp_list{text-align: left;font-size: 12px;}
+ 
  .sizebox{
      border-bottom: 1px solid #ccc;
      padding: 3.5%;
@@ -174,4 +191,6 @@ export default {
         }
     .js{text-align: left;padding: 3%;background:#f3f3f3;margin-bottom:100px }
     .js p span:nth-child(2){float: right;}
+    .fff{background:#fff}
+    .back{ background:#000;color:#fff;z-index:10}
 </style>

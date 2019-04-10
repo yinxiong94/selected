@@ -34,7 +34,8 @@ router.get("/addcart1",(req,res)=>{
     var color=req.query.color;
     var price=req.query.price;
     var store=req.query.store;
-    var size=req.query.size;      
+    var size=req.query.size;  
+    var price1=req.query.price1;   
     var sql="select id from sec_user where phone=?";
     pool.query(sql,[phone],(err,result)=>{
         if(err)throw err;
@@ -47,8 +48,8 @@ router.get("/addcart1",(req,res)=>{
                 res.send(result)})
             }
             else {
-                var sql1="insert into sec_spcar(id,uid,img_url,title,color,size,store,price,count,pid) values(?,?,?,?,?,?,?,?,?,?)";
-            pool.query(sql1,[id,uid,img_url,title,color,size,store,price,1,pid],(err,result)=>{
+                var sql1="insert into sec_spcar(id,uid,img_url,title,color,size,store,price,count,pid,price1) values(?,?,?,?,?,?,?,?,?,?,?)";
+            pool.query(sql1,[id,uid,img_url,title,color,size,store,price,1,pid,price1],(err,result)=>{
                 if(err)throw err;
                 res.send(result)
             })}

@@ -46,7 +46,7 @@
                         <p>{{color}}</p>
                         <p>{{size}}</p>
                         <span style="float:left">×{{count}}</span>
-                        <span style="float:right">￥{{price}}</span>
+                        <span style="float:right">￥{{price1}}</span>
                     </div>
                 </li>
             </ul>
@@ -67,7 +67,7 @@
         <div class="js">
             <p>
                 <span>商品总额</span>
-                <span>￥599</span>
+                <span id="zj">￥599</span>
             </p>
             <p>
                 <span>运费</span>
@@ -75,7 +75,11 @@
             </p>
             <p>
                 <span>折扣</span>
-                <span>-￥90</span>
+                <span id="zk">-￥90</span>
+            </p>
+            <p>
+                <span style="color:#000">合计：</span>
+                <span style="color:#000" id="zj1">￥0</span>
             </p>
         </div>
 
@@ -95,12 +99,20 @@ export default {
             size:this.$route.query.size,
             count:this.$route.query.count,
             price:this.$route.query.price,
-            color:this.$route.query.color
+            color:this.$route.query.color,
+            price1:this.$route.query.price1
         }
     },
     methods: {
         loadmore(){
-            console.log(this.img_url,this.title,this.pid,this.size,this.count,this.price)
+            
+            setInterval(()=>{
+                var a=(this.price1)*(this.count)
+                var b=(this.price)*(this.count)
+                document.getElementById("zj").innerHTML="￥"+a
+                document.getElementById("zk").innerHTML="-￥"+(a-b)
+                document.getElementById("zj1").innerHTML="￥"+b
+                },50)
             
         },
         login_gwc(){
@@ -116,7 +128,7 @@ export default {
                 })
         },
          gohome(){
-            this.$router.push("/")
+            this.$router.push("/")  
         },
         gospfl(){
             this.$router.push("/spfl")

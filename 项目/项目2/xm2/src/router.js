@@ -8,6 +8,7 @@ import gwc  from "./components/gwc"
 import spxq1 from "./components/spxq1"
 import cart from "./components/cart"
 import cart1 from "./components/cart1"
+import center from "./components/center"
 
 Vue.use(Router)
 
@@ -20,6 +21,7 @@ export default new Router({
     {path:"/gwc",component:gwc},
     {path:"/spxq1",component:spxq1},
     {path:"/cart",component:cart},
-    {path:"/cart1",component:cart1}
+    {path:"/cart1",component:cart1},
+    {path:"/center",component:center}
   ]
 })

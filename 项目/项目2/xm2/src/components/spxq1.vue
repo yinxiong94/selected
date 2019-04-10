@@ -173,7 +173,7 @@ export default {
         nowshop(){
             this.count=document.getElementsByClassName("jia")[0].nextElementSibling.innerHTML
             var a=document.getElementsByClassName("back")
-                this.$router.push("/cart?img_url="+this.arr[0]+"&title="+this.title+"&pid="+this.pid+"&size="+a[1].innerHTML+"&count="+this.count+"&price="+this.price+"&color="+a[0].innerHTML)
+                this.$router.push("/cart?img_url="+this.arr[0]+"&title="+this.title+"&pid="+this.pid+"&size="+a[1].innerHTML+"&count="+this.count+"&price="+this.price+"&color="+a[0].innerHTML+"&price1="+this.price1)
         },
         gohome(){
             this.$router.push("/")
@@ -247,7 +247,7 @@ export default {
            this.count=document.getElementsByClassName("jia")[0].nextElementSibling.innerHTML
             if(a.length<2){Toast("请选择颜色和尺码")}
             else { 
-                var url="http://127.0.0.1:3000/spxq/addcart1?uid="+this.uid+"&img_url="+this.arr[0]+"&title="+this.title+"&color="+a[0].innerHTML+"&price="+this.price+"&store="+this.store+"&size="+a[1].innerHTML+"&pid="+this.pid[0]+"&count="+this.count;
+                var url="http://127.0.0.1:3000/spxq/addcart1?uid="+this.uid+"&img_url="+this.arr[0]+"&title="+this.title+"&color="+a[0].innerHTML+"&price="+this.price+"&store="+this.store+"&size="+a[1].innerHTML+"&pid="+this.pid[0]+"&count="+this.count+"&price1="+this.price1;
                 this.axios.get(url).then(result=>{
                     if(result.data.code==-1){   
                         Toast("请先登录")
