@@ -118,7 +118,6 @@ export default {
                     var b=(this.list[i].price)*(this.list[i].count)
                     sum+=a;
                     sum1+=b;
-
                 }
             document.getElementById("zj").innerHTML="￥"+sum
             document.getElementById("zk").innerHTML="-￥"+(sum-sum1)

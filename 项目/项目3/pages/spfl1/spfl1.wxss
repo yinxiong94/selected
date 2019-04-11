@@ -1,0 +1,18 @@
+.header view{float: left}
+.header text{line-height: 100rpx;font-size: 24rpx}
+.header{display: flex;width: 100%;justify-content: space-around;border-bottom: 1rpx solid #ccc;margin: 0}
+.cart image{ width:50rpx;height: 50rpx;margin-top: 20rpx;vertical-align:middle}
+.logo image{width:200rpx;height: 100rpx;vertical-align:middle}
+.flpl view{width:25%;float: left;display: inline-block;text-align: center;border:1rpx solid #000;box-sizing: border-box;border-right:0;font-size: 24rpx;padding: 10rpx}
+.flpl view:nth-child(4){border-right: 1rpx solid #000}
+.spfl{ width: 96%;margin-left: 2%;margin-top: 70rpx;display: flex;flex-wrap: wrap}
+.zuo{width:49.5%;font-size: 24rpx;text-align: center;margin-bottom: 20rpx;position: relative}
+.spfl .zuo:nth-child(2n-1){margin-right: 1%}
+.zuo image{ width: 100%;height: 576rpx}
+.zuo text{margin-left: 10rpx}
+.price1{color:#666;text-decoration: line-through}
+.ykj {border: 1rpx solid red;color:red;padding-left: 10rpx;padding-right: 10rpx;border-radius: 8rpx}
+.title{ padding-bottom: 5rpx;display: block}
+.back{background: #000;color:#fff}
+.spfl .zuo .cart1 image{ width: 40rpx;height: 40rpx;margin-top:14rpx}
+.cart1{width: 66rpx;height: 66rpx;background: #fff;position: absolute;top:75%;right:10%;border-radius: 50%}

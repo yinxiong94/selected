@@ -1,0 +1,26 @@
+<view class="header">
+    <view>
+        <input placeholder='请输入商品名称或款号'></input>
+    </view>
+    <view class='saoma'>
+      <text>|</text>
+      <image src="/pages/img/search.b518c46.png"></image>
+    </view>
+</view>
+<view class='clearfix'></view>
+<view class='flz' bindtap='check'>
+    <view wx:for="{{list}}" wx:key="index" class="{{item.id==uid?'back':''}}" data-id="{{item.id}}">{{item.title}}</view>
+    
+</view>
+
+<view class='fly'>
+    <view>4月10日春季新品</view>
+    <view>4月5日春季新品</view>
+    <view>4月2日春季新品</view>
+    <view>3月29日春季新品</view>
+    <view>男装新品</view>
+    <view>女装新品</view>
+</view>
+
+
+<view class='clearfix'></view>

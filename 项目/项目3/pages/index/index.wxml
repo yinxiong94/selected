@@ -1,0 +1,59 @@
+<view class="header">
+    <view class='e'>
+      <image src="/pages/img/25.png"></image>
+    </view>
+    <view>
+        <input placeholder='请输入商品名称或款号'></input>
+    </view>
+    <view class='saoma'>
+      <text>|</text>
+      <image src="/pages/img/4.png"></image>
+    </view>
+</view>
+
+<view class='clearfix'></view>
+
+<view class='flz'>
+  <view class='fl'>
+    <image src="/pages/img/4.png"></image>
+    <text>会员码</text>
+  </view>
+  <view class='fl' bindtap='tospfl'>
+    <image src="/pages/img/1.png"></image>
+    <text>分类</text>
+  </view>
+  <view class='fl'>
+    <image src="/pages/img/25.png"></image>
+    <text>购物车</text>
+  </view>
+  <view class='fl'>
+    <image src="/pages/img/4.png"></image>
+    <text>绑定导购</text>
+  </view>
+</view>
+
+<view class='slider'>
+    <swiper autoplay='4000'>
+      <swiper-item >
+         <image src="/pages/img/upload_1d9dd745a73b941dce204ff48b716716.jpg" lazy-load='true' ></image>
+      </swiper-item>
+      <swiper-item>
+         <image src="/pages/img/upload_745b9ae87c43d7414a690d607742af9c.jpg" lazy-load='true'></image>
+      </swiper-item>
+    </swiper>
+</view>
+
+<view class='tuijian'>
+  <image src="/pages/img/upload_3bfd50deddc3c5bc86404949467bde1b.jpg"></image>
+</view>
+
+<view class="new1">
+  <text >4月10日新品</text>
+</view>
+
+<view class='newimg1'>
+  <image src="/pages/img/upload_a0f90571868238afb0a736165e355933.jpg" bindtap="tospfl1"></image>
+  <image src="/pages/img/upload_98f0cafeb6fee0854a0ac641db10cd06.jpg"></image>
+</view>
+
+<video src='/pages/img/video.mp4' controls="true"></video>

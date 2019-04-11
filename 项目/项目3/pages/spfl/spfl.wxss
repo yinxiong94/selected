@@ -1,0 +1,15 @@
+page{background: #e6e4e4}
+.header{float: left;position: relative;margin-bottom: 20rpx}
+.header view{display: inline-block}
+.header image{width:40rpx;height: 40rpx;margin-left: 20rpx}
+.header input{border:1rpx solid #ccc;font-size: 24rpx;padding-left: 20rpx;width:650rpx;position: relative;top:10rpx;left:30rpx;background: #fff}
+.saoma{ position: absolute;top:10rpx;right: -10rpx}
+.saoma text{position: absolute;top:0;color:#ccc}
+.saoma image{margin-top: 10rpx;margin-left: 30rpx}
+.clearfix::after{clear: both;content: "";display: block;}
+.flz{ width:34%;font-size: 24rpx;background:#e6e4e4;float: left;height:1100rpx;overflow-x: scroll}
+.flz view{ padding: 20rpx;margin-bottom: 2rpx}
+.fly{width:66%;float:left;font-size: 24rpx}
+.fly view{ padding:20rpx;margin-bottom: 2rpx;background: #fff}
+.back{background:#fff}
+.flz::-webkit-scrollbar {display:none}

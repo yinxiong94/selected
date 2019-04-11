@@ -1,0 +1,7 @@
+.slider,.slider swiper,.slider image{
+  height: 480rpx;
+  width: 100%;
+}
+.title{display: block;margin-bottom:6rpx}
+.xq{padding: 20rpx;font-size: 24rpx}
+.price1{ text-decoration: line-through;color:#666}

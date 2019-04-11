@@ -1,0 +1,23 @@
+<view class='slider'>
+    <swiper autoplay='4000'>
+      <swiper-item >
+         <image src="/pages/img/upload_1d9dd745a73b941dce204ff48b716716.jpg" lazy-load='true' ></image>
+      </swiper-item>
+      <swiper-item>
+         <image src="/pages/img/upload_745b9ae87c43d7414a690d607742af9c.jpg" lazy-load='true'></image>
+      </swiper-item>
+    </swiper>
+</view>
+
+<view class='xq'>
+  <text class='title'>男士鸭绒防风保暖运动羽绒服</text>
+  <text class='pid'>款号</text>
+  <view>
+    <text class='price'>￥549.5</text>
+    <text class='ykj'>一口价</text>
+  </view>
+  <view>
+    <text>价格</text>
+    <text class='price1'>1099</text>
+  </view>
+</view>

@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/spxq/spxq",
+    "pages/index/index",
+    "pages/spfl1/spfl1",
+    "pages/spfl/spfl",
+    "pages/logs/logs"
+    
+  ],
+  "window": {
+    "enablePullDownRefresh": true,
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ccc",
+    "navigationBarTitleText": "selected",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "购物商场",
+        "iconPath": "pages/img/购物商场.png",
+        "selectedIconPath": "pages/img/购物商场.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "会员中心",
+        "iconPath": "pages/img/会员中心.png",
+        "selectedIconPath": "pages/img/4.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "潮流资讯",
+        "iconPath": "pages/img/消息中心.png",
+        "selectedIconPath": "pages/img/4.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "导购天地",
+        "iconPath": "pages/img/4.png",
+        "selectedIconPath": "pages/img/4.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "附件门店",
+        "iconPath": "pages/img/4.png",
+        "selectedIconPath": "pages/img/4.png"
+      }
+    ]
+  }
+}
