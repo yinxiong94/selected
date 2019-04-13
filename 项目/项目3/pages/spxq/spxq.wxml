@@ -1,23 +1,186 @@
 <view class='slider'>
     <swiper autoplay='4000'>
-      <swiper-item >
-         <image src="/pages/img/upload_1d9dd745a73b941dce204ff48b716716.jpg" lazy-load='true' ></image>
-      </swiper-item>
-      <swiper-item>
-         <image src="/pages/img/upload_745b9ae87c43d7414a690d607742af9c.jpg" lazy-load='true'></image>
+      <swiper-item wx:for="{{arr}}" wx:key="index">
+         <image src="http://127.0.0.1:3000/{{item}}" lazy-load='true' ></image>
       </swiper-item>
     </swiper>
 </view>
 
 <view class='xq'>
-  <text class='title'>男士鸭绒防风保暖运动羽绒服</text>
+  <text class='title'>{{title}}</text>
   <text class='pid'>款号</text>
   <view>
-    <text class='price'>￥549.5</text>
+    <text class='price'>￥{{price}}</text>
     <text class='ykj'>一口价</text>
   </view>
-  <view>
+  <view class='pri'>
     <text>价格</text>
-    <text class='price1'>1099</text>
+    <text class='price1'>￥{{price1}}</text>
   </view>
 </view>
+
+<view class='sx' bindtap='show'>
+  <text>请选择  颜色分类 尺码</text>
+</view>
+
+<view class='Cart' wx:if="{{isshow}}">
+  <view class='cart'>
+  <view class='cart-item1'>
+      <image src="http://127.0.0.1:3000/{{arr[a]}}" class='img'></image> 
+    <view class='details'>
+      <view>
+        <text>￥{{price}}</text>
+      </view>
+      <view>
+        <text class='kc'>库存</text>
+        <text>{{store}}</text>
+        <text class='kc'>件</text>
+      </view>
+      <view class='kc'>{{size}}{{size1}}</view>
+      <view class='kc'>{{pid[a]}}</view>
+    </view>
+    <view class='del' bindtap='hide'>
+       <image src="/pages/img/下载 (3).png" ></image>
+    </view>
+  </view>
+
+  <view class='cart-item2'>
+    <text>颜色分类</text>
+    <view class='color'>
+      <text wx:for="{{color}}" wx:key="index" bindtap='color' data-ind="{{index}}" class="{{index===ind?'red1':''}}" data-text="{{item}}">{{item}}</text>
+    </view>
+  </view>
+
+  <view class='cart-item3'>
+    <text>尺码</text>
+    <view>
+      <text wx:for="{{sz}}" wx:key="index" bindtap='color1' data-inde="{{index}}" class="{{index===inde?'red1':''}}" data-size="{{item}}">{{item}}</text>
+    </view>
+  </view>
+
+  <view class='cart-item4'>
+    <text>购买数量</text>
+    <view class='butt'>
+      <text bindtap='jian'>-</text>
+      <text class='sl'>{{count}}</text>
+      <text bindtap='jia'>+</text>
+    </view>
+  </view>
+
+  <view class='cart-item5'>
+    <button class='black' bindtap='addcart'>加入购物车</button>
+    <button class='red'>立即购买</button>
+  </view>
+
+  </view> 
+</view>
+
+<view class='Cart' wx:if="{{isshow1}}">
+  <view class='cart'>
+  <view class='cart-item1'>
+      <image src="http://127.0.0.1:3000/{{arr[a]}}" class='img'></image> 
+    <view class='details'>
+      <view>
+        <text>￥{{price}}</text>
+      </view>
+      <view>
+        <text class='kc'>库存</text>
+        <text>{{store}}</text>
+        <text class='kc'>件</text>
+      </view>
+      <view class='kc'>{{size}}{{size1}}</view>
+      <view class='kc'>{{pid[a]}}</view>
+    </view>
+    <view class='del' bindtap='hide'>
+       <image src="/pages/img/下载 (3).png" ></image>
+    </view>
+  </view>
+
+  <view class='cart-item2'>
+    <text>颜色分类</text>
+    <view class='color'>
+      <text wx:for="{{color}}" wx:key="index" bindtap='color' data-ind="{{index}}" class="{{index===ind?'red1':''}}" data-text="{{item}}">{{item}}</text>
+    </view>
+  </view>
+
+  <view class='cart-item3'>
+    <text>尺码</text>
+    <view>
+      <text wx:for="{{sz}}" wx:key="index" bindtap='color1' data-inde="{{index}}" class="{{index===inde?'red1':''}}" data-size="{{item}}">{{item}}</text>
+    </view>
+  </view>
+
+  <view class='cart-item4'>
+    <text>购买数量</text>
+    <view class='butt'>
+      <text bindtap='jian'>-</text>
+      <text class='sl'>{{count}}</text>
+      <text bindtap='jia'>+</text>
+    </view>
+  </view>
+
+  <view class='cart-item5'>
+    <button class='black'>导购专享</button>
+    <button class='red' bindtap='addcart'>加入购物车</button>
+  </view>
+
+  </view> 
+</view>
+
+<view class='Cart' wx:if="{{isshow2}}">
+  <view class='cart'>
+  <view class='cart-item1'>
+      <image src="http://127.0.0.1:3000/{{arr[a]}}" class='img'></image> 
+    <view class='details'>
+      <view>
+        <text>￥{{price}}</text>
+      </view>
+      <view>
+        <text class='kc'>库存</text>
+        <text>{{store}}</text>
+        <text class='kc'>件</text>
+      </view>
+      <view class='kc'>{{size}}{{size1}}</view>
+      <view class='kc'>{{pid[a]}}</view>
+    </view>
+    <view class='del' bindtap='hide'>
+       <image src="/pages/img/下载 (3).png" ></image>
+    </view>
+  </view>
+
+  <view class='cart-item2'>
+    <text>颜色分类</text>
+    <view class='color'>
+      <text wx:for="{{color}}" wx:key="index" bindtap='color' data-ind="{{index}}" class="{{index===ind?'red1':''}}" data-text="{{item}}">{{item}}</text>
+    </view>
+  </view>
+
+  <view class='cart-item3'>
+    <text>尺码</text>
+    <view>
+      <text wx:for="{{sz}}" wx:key="index" bindtap='color1' data-inde="{{index}}" class="{{index===inde?'red1':''}}" data-size="{{item}}">{{item}}</text>
+    </view>
+  </view>
+
+  <view class='cart-item4'>
+    <text>购买数量</text>
+    <view class='butt'>
+      <text bindtap='jian'>-</text>
+      <text class='sl'>{{count}}</text>
+      <text bindtap='jia'>+</text>
+    </view>
+  </view>
+
+  <view class='cart-item5'>
+    <button class='black'>导购专享</button>
+    <button class='red'>立即购买</button>
+  </view>
+
+  </view> 
+</view>
+
+<view class='dbnav'>
+    <view class='no'>导购专享</view>
+    <view class='black' bindtap='cart'>加入购物车</view>
+    <view class='red' bindtap='cart1'>立即购买</view>
+</view> 

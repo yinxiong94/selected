@@ -1,5 +1,5 @@
 <view class='header'>
-    <view class='cart'>
+    <view class='cart-1'>
         <image src="/pages/img/购物车空.png"></image>
     </view>
     <view class='logo'>
@@ -20,64 +20,60 @@
 
 
 <view class='spfl'>
-    <view class='zuo'>
-        <view bindtap='tospxq'>
-          <image src="/pages/img/41915X505E39_p3.jpg"></image>
+    <view class='zuo' wx:for="{{list}}" wx:key="index">
+        <view bindtap='tospxq' >
+          <image src="http://127.0.0.1:3000/{{item.img_url}}" data-id="{{item.uid}}"></image>
         </view>
-        <view class='cart1'>
-          <image src="/pages/img/购物车空.png" ></image>
+        <view class='cart-2' bindtap='cart' >
+          <image src="/pages/img/购物车空.png" data-id="{{item.uid}}"></image>
         </view>
-        <text class='title'>男士鸭绒防风保暖运动羽绒服</text>
+        <text class='title'>{{item.title}}</text>
         <view>
-        <text>￥549.5</text>
-        <text class='price1'>￥1099</text>
+        <text>￥{{item.price}}</text>
+        <text class='price1'>￥{{item.price1}}</text>
         <text class='ykj'>一口价</text>
         </view>
     </view>
 
-    <view class='zuo'>
-        <view>
-          <image src="/pages/img/41915X505E39_p3.jpg"></image>
-        </view>
-        <view class='cart1'>
-          <image src="/pages/img/购物车空.png" ></image>
-        </view>
-        <text class='title'>男士鸭绒防风保暖运动羽绒服</text>
-        <view>
-        <text>￥549.5</text>
-        <text class='price1'>￥1099</text>
-        <text class='ykj'>一口价</text>
-        </view>
+<view class='Cart' wx:if="{{isshow}}">
+  <view class='cart'>
+  <view class='cart-item1'>
+      <image src="http://127.0.0.1:3000/{{arr[0]}}" class='img'></image> 
+      <view class='kc'>{{pid[a]}}</view>
+    <view class='del' bindtap='hide'>
+       <image src="/pages/img/下载 (3).png" ></image>
     </view>
+  </view>
 
-    <view class='zuo'>
-        <view>
-          <image src="/pages/img/41915X505E39_p3.jpg"></image>
-        </view>
-        <view class='cart1'>
-          <image src="/pages/img/购物车空.png" ></image>
-        </view>
-        <text class='title'>男士鸭绒防风保暖运动羽绒服</text>
-        <view>
-        <text>￥549.5</text>
-        <text class='price1'>￥1099</text>
-        <text class='ykj'>一口价</text>
-        </view>
+  <view class='cart-item2'>
+    <text>颜色分类</text>
+    <view class='color'>
+      <text wx:for="{{color}}" wx:key="index" bindtap='color' data-ind="{{index}}" class="{{index===ind?'red1':''}}" data-text="{{item}}">{{item}}</text>
     </view>
+  </view>
 
-    <view class='zuo'>
-        <view>
-          <image src="/pages/img/41915X505E39_p3.jpg"></image>
-        </view>
-        <view class='cart1'>
-          <image src="/pages/img/购物车空.png" ></image>
-        </view>
-        <text class='title'>男士鸭绒防风保暖运动羽绒服</text>
-        <view>
-        <text>￥549.5</text>
-        <text class='price1'>￥1099</text>
-        <text class='ykj'>一口价</text>
-        </view>
+  <view class='cart-item3'>
+    <text>尺码</text>
+    <view>
+      <text wx:for="{{sz}}" wx:key="index" bindtap='color1' data-inde="{{index}}" class="{{index===inde?'red1':''}}" data-size="{{item}}">{{item}}</text>
     </view>
+  </view>
+
+  <view class='cart-item4'>
+    <view class='butt'>
+      <text bindtap='jian'>-</text>
+      <text class='sl'>{{count}}</text>
+      <text bindtap='jia'>+</text>
+    </view>
+    <text>库存：{{store}}</text>
+  </view>
+
+  <view class='cart-item5'>
+    <button class='red' bindtap='addcart'>加入购物车</button>
+  </view>
+
+  </view> 
+</view>
+
 
 </view> 

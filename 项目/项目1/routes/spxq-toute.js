@@ -49,7 +49,7 @@ router.get("/addcart1",(req,res)=>{
             }
             else {
                 var sql1="insert into sec_spcar(id,uid,img_url,title,color,size,store,price,count,pid,price1) values(?,?,?,?,?,?,?,?,?,?,?)";
-            pool.query(sql1,[id,uid,img_url,title,color,size,store,price,1,pid,price1],(err,result)=>{
+            pool.query(sql1,[id,uid,img_url,title,color,size,store,price,count,pid,price1],(err,result)=>{
                 if(err)throw err;
                 res.send(result)
             })}
@@ -119,6 +119,40 @@ router.get("/addcart",(req,res)=>{
             else {
                 var sql1="insert into sec_spcar(id,uid,img_url,title,color,size,store,price,count) values(?,?,?,?,?,?,?,?,?)";
             pool.query(sql1,[id,uid,img_url,title,color,size,store,price,1],(err,result)=>{
+                if(err)throw err;
+                res.send(result)
+            })}
+        })
+        
+    })
+})
+
+router.get("/addcart3",(req,res)=>{
+    var phone=13875873502;
+    var pid=req.query.pid;
+    var count=req.query.count;
+    var uid=req.query.uid;
+    var img_url=req.query.img_url;
+    var title=req.query.title;
+    var color=req.query.color;
+    var price=req.query.price;
+    var store=req.query.store;
+    var size=req.query.size;  
+    var price1=req.query.price1;   
+    var sql="select id from sec_user where phone=?";
+    pool.query(sql,[phone],(err,result)=>{
+        if(err)throw err;
+        var id=result[0].id;  
+        pool.query("select*from sec_spcar where id=? and uid=?",[id,uid],(err,result)=>{
+            if(err)throw err;
+            if(result.length>0){
+               pool.query(`UPDATE sec_spcar set count=count+${count} where uid=${uid}`,(err,result)=>{
+                if(err)throw err;
+                res.send(result)})
+            }
+            else {
+                var sql1="insert into sec_spcar(id,uid,img_url,title,color,size,store,price,count,pid,price1) values(?,?,?,?,?,?,?,?,?,?,?)";
+            pool.query(sql1,[id,uid,img_url,title,color,size,store,price,count,pid,price1],(err,result)=>{
                 if(err)throw err;
                 res.send(result)
             })}

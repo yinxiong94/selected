@@ -1,0 +1,83 @@
+page{
+  font-size: 24rpx
+}
+.cart{
+  margin-top:20rpx;
+  position: relative;
+  padding: 10rpx 20rpx
+}
+.check{
+  transform:scale(.6);
+}
+.cart-item{
+  display: inline-block;
+  vertical-align: middle;
+  
+}
+.img{
+  display: inline-block;
+  width: 150rpx;
+  height: 220rpx
+}
+.cart-item-1{
+  display: inline-block;
+  vertical-align: top;
+}
+.cart-item-1 view{
+  padding: 6rpx 20rpx
+}
+.del{
+  width: 20rpx;
+  height: 20rpx;
+  position: absolute;
+  top:100rpx;
+  right: 100rpx
+}
+.update{
+  width:30rpx;
+  height: 40rpx;
+  position: absolute;
+  top:160rpx;
+  right: 100rpx
+}
+.butt{
+  width: 25%;
+  background: #000;
+  color:#fff;
+  font-size: 26rpx;
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  bottom: 0;
+  right: 0rpx;
+  border-radius: 0;
+  border: 2rpx solid #000
+}
+.dbnav{
+  padding: 10rpx 20rpx;
+  border-top: 2rpx solid #000;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+.dbnav text{
+  line-height: 44rpx
+}
+.title{
+  width:400rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden
+}
+.hj{
+  float: right;
+}
+.zj{
+  float: right;
+  margin-right: 200rpx
+}
+.price{
+  display: inline-block;
+  margin-left:100rpx 
+}

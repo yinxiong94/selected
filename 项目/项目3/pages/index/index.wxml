@@ -56,4 +56,4 @@
   <image src="/pages/img/upload_98f0cafeb6fee0854a0ac641db10cd06.jpg"></image>
 </view>
 
-<video src='/pages/img/video.mp4' controls="true"></video>
+<video src='/pages/img/video.mp4'  controls="true" poster='http://127.0.0.1:3000/img/upload_3bfc7fe0cf17a8322c49e72f53a3101f.jpg' autoplay='true' loop="true"></video>

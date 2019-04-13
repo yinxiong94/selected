@@ -1,0 +1,27 @@
+<view class='cart' wx:for="{{list}}" wx:key="index">
+    <checkbox class='check' data-count="{{item.count}}" data-price="{{item.price}}"  bindtap='change' data-index='{{index}}'></checkbox>
+    <view class='cart-item'>
+      <image src="http://127.0.0.1:3000/{{item.img_url}}" class='img'></image>
+      <view class='cart-item-1'>
+          <view class='title'>{{item.title}}</view>
+          <view>{{item.pid}}</view>
+          <view>{{item.color}}</view>
+          <view>{{item.size}}</view>
+          <view>
+              <text>{{item.count}}</text>
+              <text class='price'>￥{{item.price}}</text>
+          </view> 
+      </view>
+      <image src="/pages/img/下载 (3).png" class='del' data-uid="{{item.uid}}"></image>
+      <image src="/pages/img/edit.3515bdd.png" class='update' data-uid="{{item.uid}}"></image>
+    </view>
+</view>
+
+<view class='dbnav'>
+    <checkbox class='check'></checkbox>
+    <text>全选</text>
+     <text class='zj'>{{price}}</text>
+    <text class='hj'>合计：</text>
+   
+    <button class='butt'>购买结算</button>
+</view>

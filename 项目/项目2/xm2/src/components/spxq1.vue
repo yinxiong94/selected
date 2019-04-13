@@ -3,29 +3,19 @@
         <div class="hed">
             <div class="header">
                 <div class="box1" @click="gospfl">
-                    <router-link to="">
                         <img src="../img/1.png" alt="">
-                    </router-link>
                 </div> 
                 <div class="box5">
-                    <router-link to="">
                         <img src="../img/getPosition.e5feda3.png" alt="">
-                    </router-link>
                 </div>
                 <div class="box2" @click="gohome"> 
-                    <router-link to="">
                         <img src="../img/SELECTED.png" alt="">
-                    </router-link>
                 </div>
                 <div class="box3" @click="login_gwc">
-                    <router-link to="">
                         <img src="../img/25.png" alt="">
-                    </router-link>
                 </div>
                 <div class="box4">
-                    <router-link to="">
                         <img src="../img/4.png" alt="">
-                    </router-link>
                 </div>       
             </div>
         </div>

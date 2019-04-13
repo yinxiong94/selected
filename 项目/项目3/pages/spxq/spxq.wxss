@@ -2,6 +2,178 @@
   height: 480rpx;
   width: 100%;
 }
-.title{display: block;margin-bottom:6rpx}
-.xq{padding: 20rpx;font-size: 24rpx}
-.price1{ text-decoration: line-through;color:#666}
+.title{
+  display: block;
+  margin-bottom:6rpx;
+  font-size: 26rpx
+  }
+.xq{
+  padding: 20rpx;
+  font-size: 24rpx
+  }
+.price1{ 
+  text-decoration: line-through;
+  color:#666
+  }
+.ykj{ 
+  background: red;
+  color:#fff;
+  padding: 0 10rpx
+  }
+.pri{ 
+  color:#666
+  }
+  .red1{
+    background: red;
+    color:#fff;
+    border-radius: 5rpx
+  }
+.price{ 
+  color:red;
+  font-size: 28rpx;
+  font-weight: bold
+  }
+.sx{ 
+  font-size: 26rpx;
+  border-bottom: 1rpx solid #999;
+  border-top: 1rpx solid #999;
+  width: 96%;
+  margin: auto;
+  padding: 10rpx 5rpx;
+  background: url("http://127.0.0.1:3000/img/right.53f3bca.png") no-repeat  97% center;       background-size: 16rpx 32rpx
+  }
+.dbnav{ 
+  width: 100%;
+  margin: auto;
+  position: fixed;
+  bottom: 0;  
+  font-size: 26rpx
+  }
+  .black{ 
+    background: #000;
+    color:#fff;
+    border: 1rpx solid #000;
+    box-sizing: border-box
+    }
+  .red{ 
+    background:red;
+    color:#fff;
+    border: 1rpx solid transparent;
+    box-sizing:border-box;
+    }
+  .dbnav view{ 
+    width: 33.3333%;
+    float: left;
+    text-align:center;
+    padding: 20rpx 0;
+    }
+    .no{ 
+      border: 1rpx solid #000;
+      box-sizing:border-box;
+      background: #fff
+      }
+    .cart{
+      position: absolute;
+      bottom: 0;
+      background: #fff;
+      border-top: 1rpx solid transparent;
+    }
+    .img{ 
+      width: 25%;
+      height: 320rpx;
+      margin-top: -30rpx;
+      }
+    .details{
+      display: inline-block;
+      vertical-align: top;
+      padding: 0 20rpx
+    }
+    .cart-item1{
+      width: 96%;
+      margin: 0 2% 0 2%;
+      border-bottom: 1rpx solid #ccc
+    }
+    .del{
+      display: inline-block;
+      vertical-align: top;
+      position: absolute;
+      right: 20rpx;
+      margin-top: 20rpx
+    }
+    .del image{ 
+      width: 30rpx;
+      height: 30rpx;
+      vertical-align: top;
+    }
+    .cart-item2{
+      font-size: 26rpx;
+      padding: 10rpx 20rpx 0 20rpx; 
+    }
+    .color{
+      margin-top: 10rpx;
+      padding: 10rpx 0 10rpx 0;
+      border-bottom: 1rpx solid #ccc
+    }
+    .color text{
+      padding: 10rpx 50rpx;
+      margin-right: 10rpx;
+      margin-bottom: 10rpx;
+      display: inline-block
+    }
+    .cart-item3{
+      border-bottom:1rpx solid #ccc;
+      margin: 0 2% 0 2%;
+      width: 96%
+    }
+    .cart-item3 view{
+      display: flex;
+      flex-wrap: wrap;
+      font-size: 26rpx
+    }
+    .cart-item3 view text{
+      padding:10rpx 10rpx;
+      margin-right: 10rpx;
+      margin-bottom: 10rpx
+    }
+    .cart-item4 .butt text{
+      display: inline-block;
+      border: 1rpx solid #ccc;
+      width: 36rpx;
+      text-align: center
+    }
+    .cart-item4{
+      display: flex;
+      justify-content: space-between;
+      font-size: 26rpx;
+      width: 96%;
+      margin: auto;
+      padding: 20rpx 0 20rpx 0
+    }
+    .butt{
+      display: inline-block;
+    }
+    .cart-item4 .butt .sl{
+      border-left:0;
+      border-right:0;
+      display: inline-block;
+      width: 80rpx 
+    }
+    .cart-item5 button{
+      display: inline-block;
+      width: 50%;
+      border-radius: 0;
+      font-size: 28rpx;
+      vertical-align: bottom;
+    }
+    .Cart{
+      width:750rpx;
+      height: 8000rpx;
+      background: rgba(0, 0, 0, 0.3);
+      position: fixed;
+      bottom: 0;
+      z-index: 11
+    }
+    .kc{
+      font-size: 24rpx;
+      padding: 10rpx
+    }
