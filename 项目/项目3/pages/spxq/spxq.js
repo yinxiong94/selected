@@ -25,6 +25,18 @@ Page({
       size1:"",
       a:0
   },
+  nowshop:function(){
+    console.log(this.data.size === "请选择尺码")
+    if (this.data.size === "请选择尺码" || !this.data.size1){
+      wx.showToast({
+        title: '请选择颜色或尺码',
+      })
+    }else{
+      wx.navigateTo({
+        url: '/pages/buyclose/buyclose?uid='+this.data.uid+"&title="+this.data.title+"&pid="+this.data.pid[this.data.a]+"&color="+this.data.size+"&size="+this.data.size1+"&price="+this.data.price+"&price1="+this.data.price1+"&img_url="+this.data.arr[this.data.a]
+      })
+    }
+  },
   addcart:function(){
     if(this.data.size=="" || this.data.size1==""){
       wx.showToast({
@@ -37,9 +49,13 @@ Page({
       method:"GET",
       data: { pid: this.data.pid[this.data.a], count: this.data.count, uid: this.data.uid, img_url: this.data.arr[this.data.a],title:this.data.title,color:this.data.size,price:this.data.price,store:this.data.store,size:this.data.size1,price1:this.data.price1},
       success:(res)=>{
-        console.log(res)
+        wx.showToast({
+          title: '添加购物车成功',
+        })
+        this.setData({isshow:false,isshow1:false})
       }
     })
+    
     }
   },
   color:function(e){

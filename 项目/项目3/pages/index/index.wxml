@@ -22,8 +22,9 @@
     <image src="/pages/img/1.png"></image>
     <text>分类</text>
   </view>
-  <view class='fl'>
+  <view class='fl' bindtap='tocart'>
     <image src="/pages/img/25.png"></image>
+    <text class='cartsl'>{{index}}</text>
     <text>购物车</text>
   </view>
   <view class='fl'>

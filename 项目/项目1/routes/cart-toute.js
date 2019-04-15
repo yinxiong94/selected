@@ -18,6 +18,7 @@ router.get("/",(req,res)=>{
     })
 })
 
+
 router.get("/1",(req,res)=>{
     var phone=13875873502;
     var sql="select id from sec_user where phone=?";

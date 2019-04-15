@@ -1,8 +1,8 @@
 .header view{float: left}
 .header text{line-height: 100rpx;font-size: 24rpx}
-.header{display: flex;width: 100%;justify-content: space-around;border-bottom: 1rpx solid #ccc;margin: 0}
-.cart-1 image{ width:50rpx;height: 50rpx;margin-top: 20rpx;vertical-align:middle}
-.logo image{width:200rpx;height: 100rpx;vertical-align:middle}
+.header{display: flex;width: 100%;justify-content: space-around;border-bottom: 1rpx solid #ccc;margin: 0;position: relative}
+.cart-1 image{ width:50rpx;height: 50rpx;margin-top: 20rpx}
+.logo image{width:200rpx;height: 100rpx}
 .flpl view{width:25%;float: left;display: inline-block;text-align: center;border:1rpx solid #000;box-sizing: border-box;border-right:0;font-size: 24rpx;padding: 10rpx}
 .flpl view:nth-child(4){border-right: 1rpx solid #000}
 .spfl{ width: 96%;margin-left: 2%;margin-top: 70rpx;display: flex;flex-wrap: wrap}
@@ -131,3 +131,17 @@
       font-size: 24rpx;
       padding: 10rpx
     }
+  .header .cartsl{
+    background: red;
+    color:#fff;
+    border-radius: 50%;
+    width:34rpx;
+    height: 34rpx;
+    display: inline-block;
+    position: absolute;
+    top:10rpx;
+    left: 110rpx;
+    line-height: 34rpx;
+    text-align: center;
+    font-size: 24rpx
+}

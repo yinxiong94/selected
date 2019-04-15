@@ -1,13 +1,14 @@
 {
   "pages": [
-    "pages/cart/cart",
     "pages/index/index",
+    "pages/cart/cart",
+    
     "pages/spfl1/spfl1",
     "pages/spfl/spfl",
     "pages/spxq/spxq",
     "pages/logs/logs",
-    "pages/log/log"
-    
+    "pages/log/log",
+    "pages/buyclose/buyclose"
   ],
   "window": {
     "enablePullDownRefresh": true,

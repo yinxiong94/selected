@@ -1,6 +1,7 @@
 <view class='header'>
-    <view class='cart-1'>
+    <view class='cart-1' bindtap='tocart'>
         <image src="/pages/img/购物车空.png"></image>
+        <text class='cartsl'>{{cartsl}}</text>
     </view>
     <view class='logo'>
         <image src="/pages/img/SELECTED.png"></image>
@@ -34,6 +35,7 @@
         <text class='ykj'>一口价</text>
         </view>
     </view>
+</view> 
 
 <view class='Cart' wx:if="{{isshow}}">
   <view class='cart'>
@@ -76,4 +78,3 @@
 </view>
 
 
-</view> 

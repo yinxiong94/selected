@@ -23,7 +23,13 @@ Page({
       inde: "",
       a:0,
       size:"",
-      size1:""
+      size1:"",
+      cartsl:0
+  },
+  tocart:function(){
+    wx.navigateTo({
+      url: '/pages/cart/cart',
+    })
   },
   hide:function(){
     this.setData({isshow:false})
@@ -64,7 +70,6 @@ Page({
         h = h[0].split("&&");
         var i = a.Store;
         this.setData({ list1: a, color: b, title: c, price: d, price1: e, pid: f, sz: g, arr: h, store: i })
-        console.log(this.data)
       }
     })
   },
@@ -86,7 +91,10 @@ Page({
         method: "GET",
         data: { pid: this.data.pid[this.data.a], count: this.data.count, uid: this.data.uid1, img_url: this.data.arr[this.data.a], title: this.data.title, color: this.data.size, price: this.data.price, store: this.data.store, size: this.data.size1, price1: this.data.price1 },
         success: (res) => {
-          console.log(res)
+          wx.showToast({
+            title: '添加购物车成功'
+          })
+          this.setData({isshow:false})
         }
       })
     }
@@ -100,7 +108,12 @@ Page({
         url: 'http://127.0.0.1:3000/sp',
         success:(res)=>{
           this.setData({list:res.data})
-          console.log(this.data.list)
+        }
+      }),
+      wx.request({
+        url: 'http://127.0.0.1:3000/cart/1',
+        success:(res)=>{
+          this.setData({ cartsl: res.data.length })
         }
       })
   },

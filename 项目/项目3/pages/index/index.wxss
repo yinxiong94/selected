@@ -19,29 +19,106 @@
 .usermotto {
   margin-top: 200px;
 }
-.header{float: left;position: relative}
-.header view{display: inline-block}
-.e image{position: absolute;top:16rpx}
-.header image{width:40rpx;height: 40rpx;margin-left: 20rpx}
-.header input{border:1rpx solid #ccc;font-size: 24rpx;background: url("http://127.0.0.1:3000/img/search.b518c46.png") no-repeat 10rpx center;padding-left: 50rpx;background-size: 40rpx 40rpx;width:600rpx;position: relative;top:10rpx;left:80rpx}
-.saoma{ position: absolute;top:10rpx;right: -60rpx}
-.saoma text{position: absolute;top:0}
-.saoma image{margin-top: 10rpx;margin-left: 40rpx}
-.fl{ width: 25%;display: flex;
+.header{
+  float: left;
+  position: relative
+  }
+.header view{
+  display: inline-block
+  }
+.e image{
+  position: absolute;
+  top:16rpx
+  }
+.header image{
+  width:40rpx;
+  height: 40rpx;
+  margin-left: 20rpx
+  }
+.header input{
+  border:1rpx solid #ccc;
+  font-size: 24rpx;
+  background: url("http://127.0.0.1:3000/img/search.b518c46.png") no-repeat 10rpx center;     padding-left: 50rpx;
+  background-size: 40rpx 40rpx;
+  width:600rpx;
+  position: relative;
+  top:10rpx;
+  left:80rpx
+  }
+.saoma{ 
+  position: absolute;
+  top:10rpx;
+  right: -60rpx
+  }
+.saoma text{
+  position: absolute;
+  top:0
+  }
+.saoma image{
+  margin-top: 10rpx;
+  margin-left: 40rpx
+  }
+.fl{ 
+  width: 25%;
+  display: flex;
   flex-direction: column;
-  justify-content: center}
-.flz{display: flex;flex-wrap:wrap;font-size: 24rpx;text-align: center;margin-top: 10rpx;margin-bottom: 10rpx}
-.fl image{width:40rpx;height: 40rpx;margin:auto}
-.clearfix::after{clear: both;content: "";display: block;}
+  justify-content: center;
+  position: relative}
+.flz{
+  display: flex;
+  flex-wrap:wrap;
+  font-size: 24rpx;
+  text-align: center;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx
+  }
+.fl image{
+  width:40rpx;
+  height: 40rpx;
+  margin:auto
+  }
+.clearfix::after{
+  clear: both;
+  content: "";
+  display: block;
+  }
 .slider,.slider swiper,.slider image{
   height: 480rpx;
   width: 100%;
 }
 .tuijian image{
-  width:100%;height:480rpx
+  width:100%;
+  height:480rpx
 }
-.new1{ text-align: center}
-.newimg1 image{width:49.5%;height:335rpx;margin-top: 10rpx}
-.newimg1 image:nth-child(2){margin-left: 1%}
-.newimg1{width:96%;margin-left: 2%}
-video{width:100%}
+.new1{ 
+  text-align: center
+  }
+.newimg1 image{
+  width:49.5%;
+  height:335rpx;
+  margin-top: 10rpx
+  }
+.newimg1 image:nth-child(2){
+  margin-left: 1%
+  }
+.newimg1{
+  width:96%;
+  margin-left: 2%
+  }
+video{
+  width:100%
+  }
+.cartsl{
+  display: inline-block;
+  position: absolute;
+  top:-10rpx;
+  right:46rpx;
+  color:#fff;
+  background: red;
+  border-radius: 50%;
+  width: 34rpx;
+  height: 34rpx;
+  font-size: 24rpx;
+  text-align: center;
+  vertical-align: top
+}

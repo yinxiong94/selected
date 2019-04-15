@@ -1,0 +1,54 @@
+<view class="order">订单摘要</view>
+
+<view class='cart'>
+  <view class='cart-item'>
+        <image src="http://127.0.0.1:3000/{{img_url}}" class='img'></image>
+        <view class='cart-item-1'>
+            <view class='title'>{{title}}</view>
+            <view>{{pid}}</view>
+            <view>{{color}}</view>
+            <view>{{size}}</view>
+            <view>×{{count}}</view>
+            <view>
+                <text>￥{{price}}</text>
+                <text class='price1'>￥{{price1}}</text>
+            </view>
+        </view>
+        <view class='price'>￥{{price}}</view>
+  </view>
+</view>
+
+
+<view class='order'>配送方式</view>
+<view class='order-fs'>
+    <text>邮寄到家</text>
+    <text>到店自提</text>
+</view>
+<view class='order shxx'>收货信息</view>
+<view class='order shxx'>输入券码</view>
+<view class='order shxx'>
+    优惠券
+    <text>请选择</text>
+</view>
+
+<view class='order-1'>
+    <view class="order-item">
+        <text>商品总额</text>
+        <text class='order-item-1'>￥{{price1}}</text>
+    </view>
+    <view class="order-item">
+        <text>运费</text>
+        <text class='order-item-1'>+￥0</text>
+    </view>
+    <view class="order-item">
+        <text>优惠</text>
+        <text class='order-item-4'>-￥{{price2}}</text>
+    </view>
+    <view class="order-item2">
+      <text class='order-item-2'>合计</text>
+      <text class='order-item-3'>￥{{price}}</text>
+    </view>
+
+</view> 
+
+<button>立即支付</button>

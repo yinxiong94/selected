@@ -1,5 +1,5 @@
 <view class='cart' wx:for="{{list}}" wx:key="index">
-    <checkbox class='check' data-count="{{item.count}}" data-price="{{item.price}}"  bindtap='change' data-index='{{index}}'></checkbox>
+    <checkbox class='check' data-count="{{item.count}}" data-price="{{item.price}}"  bindtap='change' data-ind='{{index}}' checked='{{checked[index]}}'></checkbox>
     <view class='cart-item'>
       <image src="http://127.0.0.1:3000/{{item.img_url}}" class='img'></image>
       <view class='cart-item-1'>
@@ -18,10 +18,10 @@
 </view>
 
 <view class='dbnav'>
-    <checkbox class='check'></checkbox>
+    <checkbox class='check' bindtap='all' checked='{{c}}'></checkbox>
     <text>全选</text>
      <text class='zj'>{{price}}</text>
     <text class='hj'>合计：</text>
    
-    <button class='butt'>购买结算</button>
+    <button class='butt' bindtap='nowshop'>购买结算</button>
 </view>

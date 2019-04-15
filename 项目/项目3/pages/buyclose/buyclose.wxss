@@ -1,0 +1,104 @@
+page{
+  font-size: 24rpx
+}
+.cart{
+  position: relative;
+  padding: 15rpx 0rpx;
+  width:96%;
+  border-bottom: 1rpx dashed #000;
+  margin-left: 2%
+}
+.order{
+  font-size: 28rpx;
+  padding: 20rpx;
+  border-bottom: 2rpx solid #000;
+  width: 96%;
+  margin-left: 2%;
+  margin-bottom: 10rpx;
+  box-sizing: border-box
+}
+.cart-item{
+  display: inline-block;
+  vertical-align: middle;
+  
+}
+.img{
+  display: inline-block;
+  width: 150rpx;
+  height: 220rpx;
+  margin-top: 10rpx;
+  vertical-align: middle
+}
+.cart-item-1{
+  display: inline-block;
+  vertical-align: top  
+}
+.cart-item-1 view{
+  padding: 4rpx 20rpx;
+}
+.price1{
+  text-decoration: line-through;
+  color:#ccc
+}
+.price{
+  position: absolute;
+  top:46%;
+  right: 30rpx
+}
+.shxx{
+  background:url("http://127.0.0.1:3000/img/right.53f3bca.png") no-repeat 95% center;
+  background-size: 20rpx 30rpx
+}
+.shxx text {
+  display: inline-block;
+  float: right;
+  margin-right:6%
+}
+button{
+  background:#000;
+  color:#fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%
+}
+.order-1{
+  width:96%;
+  margin-left: 2%;
+  color:#666;
+  margin-bottom: 160rpx
+}
+.order-item{
+  margin-bottom: 10rpx
+}
+.order-item-1{
+  display: inline-block;
+  float: right
+}
+.order-item2{
+  float: right
+}
+.order-item-2{
+  margin-right: 20rpx
+}
+.order-item-3{
+  font-size: 28rpx;
+  color:#000
+}
+.order-item-4{
+  display: inline-block;
+  float: right;
+  color:red;
+}
+.order-fs{
+  width:96%;
+  margin-left: 2%;
+  padding: 10rpx 0 20rpx 10rpx;
+  border-bottom:1rpx dashed #000
+}
+.order-fs text{
+  display: inline-block;
+  padding:8rpx 18rpx;
+  border:1rpx solid #000;
+  border-radius: 16rpx;
+  margin-right: 20rpx 
+}
